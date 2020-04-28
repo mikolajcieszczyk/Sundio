@@ -2,20 +2,191 @@ header {
     width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(2, 30%);
+    grid-template-columns: repeat(2, 40%);
     grid-template-rows: 20vh auto 20vh;
 
     justify-content: center;
+
+    padding-top: 1%;
 
     background-image: url('../img/Sundio_content/background_main.png');
     background-attachment: fixed;
     background-size: cover;
 
-    color: #fff;
+    aside {
+        display: flex;
+        justify-content: center;
+
+        p {
+            margin-right: 15%;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+
+        text-transform: uppercase;
+        
+        li {
+            margin-right: 5%;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
 
     .header__logo {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .header__text {
+        width: 70%;
+    }
+
+    .header__social {
+        width: 70%;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 20% 50%;
+
+    justify-items: center;
+
+    background: #000;
+
+    .about__text {
+        width: 40%;
+
+        text-align: justify;
+    }
+
+    .about__images {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 300px;
+            height: 200px;
+
+            margin: 0 1%;
+        }
+        
+    }
+}
+
+#location {
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 50% 25% 25%;
+    justify-content: end;
+    justify-items: start;
+
+    background-image: url('../img/Sundio_content/background_location.png');
+    background-attachment: fixed;
+    background-size: cover;
+
+    .location__title {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .location__text {
+        width: 50%;
+    }
+
+    .location__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 30% 20%;
+    grid-column-gap: 10%;
+    grid-template-rows: 80%;
+
+    justify-content: center;
+    align-content: center;
+
+    background: #000;
+
+    .contact__image {
+        width: 100%;
+        background-image: url('../img/Sundio_content/image_contact.png');
+        background-repeat: no-repeat;
+
+        .contact__image--title {
+            position: relative;
+            top: 100px;
+            right: 30px;
+        }
+    }
+
+    .contact__form {
+        display: grid;
+        grid-template-rows: 30% 70%;
+
+        .form__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form__form {
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                height: 200px;
+            }
+
+            button {
+                width: 30%;
+                align-self: flex-end;
+
+                margin-top: 2%
+            }
+        }
+    }
+}
+
+footer {    
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    justify-content: center;
+    align-content: center;
+
+    color: #000;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    .footer__social {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer__copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

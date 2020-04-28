@@ -310,20 +310,44 @@ template {
 body {
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(5, 100vh); }
+  grid-template-rows: 100vh 100vh 100vh 100vh 80px;
+  color: #fff; }
 
 header {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 30%);
+  grid-template-columns: repeat(2, 40%);
   grid-template-rows: 20vh auto 20vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 1%;
   background-image: url("../img/Sundio_content/background_main.png");
   background-attachment: fixed;
-  background-size: cover;
-  color: #fff; }
+  background-size: cover; }
+  header aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    header aside p {
+      margin-right: 15%; }
+  header ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-transform: uppercase; }
+    header ul li {
+      margin-right: 5%; }
+    header ul a {
+      color: white;
+      text-decoration: none; }
   header .header__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -334,5 +358,145 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  header .header__text {
+    width: 70%; }
+  header .header__social {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 20% 50%;
+  justify-items: center;
+  background: #000; }
+  #about .about__text {
+    width: 40%;
+    text-align: justify; }
+  #about .about__images {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #about .about__images img {
+      width: 300px;
+      height: 200px;
+      margin: 0 1%; }
+
+#location {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 50% 25% 25%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  justify-items: start;
+  background-image: url("../img/Sundio_content/background_location.png");
+  background-attachment: fixed;
+  background-size: cover; }
+  #location .location__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  #location .location__text {
+    width: 50%; }
+  #location .location__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+
+#contact {
+  display: grid;
+  grid-template-columns: 30% 20%;
+  grid-column-gap: 10%;
+  grid-template-rows: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #000; }
+  #contact .contact__image {
+    width: 100%;
+    background-image: url("../img/Sundio_content/image_contact.png");
+    background-repeat: no-repeat; }
+    #contact .contact__image .contact__image--title {
+      position: relative;
+      top: 100px;
+      right: 30px; }
+  #contact .contact__form {
+    display: grid;
+    grid-template-rows: 30% 70%; }
+    #contact .contact__form .form__logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    #contact .contact__form .form__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      #contact .contact__form .form__form textarea {
+        height: 200px; }
+      #contact .contact__form .form__form button {
+        width: 30%;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        margin-top: 2%; }
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #000; }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none; }
+  footer .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  footer .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
