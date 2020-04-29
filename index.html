@@ -7,20 +7,54 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 100) {
+                    $(".toTheTop__button").fadeIn("slow").addClass("toTheTop__button--show");
+                } else {
+                    $(".toTheTop__button").fadeOut("slow").removeClass("toTheTop__button--show");
+                }
+            });
+            $(".toTheTop__button").on("click", function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+            })
+        });
+    </script>
 </head>
 <body>
-
-    <header>
+    <header id="header">
         <aside>
-            <p>+48 444 555 666</p>
-            <p>mail@mail.pl</p>
+            <p>
+                <img src="img/Sundio_content/icon_phonecall.png" alt="zadzwoń" title="zadzwoń">
+                <span>&nbsp;+48 621-982-3684</span>
+            </p>
+            <p>
+                <img src="img/Sundio_content/icon_email.png" alt="email" title="e-mail">
+                <span>&nbsp;kontakt@sundio.pl</span>
+            </p>
         </aside>
 
         <nav>
             <ul>
-                <li><a href="#">o nas</a></li>
-                <li><a href="#">lokalizacja</a></li>
-                <li><a href="#">kontakt</a></li>
+                <li><a href="#about">o nas</a></li>
+                <li><a href="#location">lokalizacja</a></li>
+                <li><a href="#contact">kontakt</a></li>
             </ul>
         </nav>
         
@@ -32,21 +66,17 @@
                 Aliquam voluptas aliquam. Assumenda nesciunt ipsa alias numquam corporis facere reiciendis. Tempore unde consectetur in hic ad id tempora quae soluta. Tempore modi consequuntur tenetur quibusdam.
             </p>
             <p>
-                Aliquam voluptas aliquam. Assumenda nesciunt ipsa alias numquam corporis facere reiciendis. Tempore unde consectetur
-                in hic ad id tempora quae soluta. Tempore modi consequuntur tenetur quibusdam.
-            </p>
-            <p>
-                Aliquam voluptas aliquam. Assumenda nesciunt ipsa alias numquam corporis facere reiciendis. Tempore unde consectetur
-                in hic ad id tempora quae soluta. Tempore modi consequuntur tenetur quibusdam.
+                Ipsa eum eum velit sapiente quaerat est et qui quis. Velit corporis aut. Et repellat et sunt dolorem quisquam autem aut. Omnis ab odio sed. Est ut odit.
             </p>
         </div>
         <div></div>
 
         <div class="header__social">
+            
             <p>odwiedź nas na</p>
-            <p>FB</p>
-            <p>INSTA</p>
-            <p>Pin</p>
+            <div><img src="img/Sundio_content/icon_fb.png" alt="facebook" title="faceboook"></div>
+            <div><img src="img/Sundio_content/icon_instagram.png" alt="instagram" title="instagram"></div>
+            <div><img src="img/Sundio_content/icon_pinterest.png" alt="pinterest" title="pinterest"></div>
         </div>
 
     </header>
@@ -80,17 +110,19 @@
 
         <div class="location__info">
             <div class="info__tel">
+                <img src="img/Sundio_content/icon_phonecall.png" alt="zadzwoń" title="zadzwoń">
                 505 505 505
             </div>
             <div class="info__email">
+                <img src="img/Sundio_content/icon_email.png" alt="e-mail" title="e-mail">
                 mail@mail.pl
             </div>
             <div class="info__hours">
-                pn-pt 8-16
-                sb-ndz 9-12
+                <span>pn-pt 8-16</span>
+                <span>sb-ndz 9-12</span>
             </div>
             <div class="info__address">
-                ul. Kowalska 21b, Warszawa
+                <span>ul. Kowalska 21b, Warszawa</span>
             </div>
         </div>
     </section>
@@ -126,22 +158,26 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">o nas</a></li>
-                <li><a href="#">lokalizacja</a></li>
+                <li><a href="#header">home</a></li>
+                <li><a href="#about">o nas</a></li>
+                <li><a href="#location">lokalizacja</a></li>
             </ul>
         </nav>
 
         <div class="footer__social">
-            <p>facebook</p>
-            <p>insta</p>
-            <p>pinterest</p>
+            <img src="img/Sundio_content/icon_fb_footer.png" alt="facebook" title="facebook">
+            <img src="img/Sundio_content/icon_instagram_footer.png" alt="instagram" title="instagram">
+            <img src="img/Sundio_content/icon_pinterest_footer.png" alt="pinterest" title="pinterest">
         </div>
 
         <div class="footer__copyright">
-            copyright
+            <span>2018 &copy;</span>
+            <span>KACPER KOWALSKI (design)</span>
+            <span>MIKOŁAJ CIĘSZCZYK (code)</span>
         </div>
     </footer>
+
+    <button class="toTheTop__button"><img src="img/top-arrow.png" alt="top-arrow" title="do góry"></button>
     
 </body>
 </html>

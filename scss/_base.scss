@@ -1,8 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700,900|Roboto+Condensed:400,700&display=swap');
+
+$ff-fira: 'Fira Sans', sans-serif;
+$ff-roboto: 'Roboto Condensed', sans-serif;
+
+$fw-normal: 400;
+$fw-bold: 700;
+
+$fs-normal: 16px;
+$fs-big: 2em;
+
+html {
+  font-size: 62.5%;
+}
+
 body {
     width: 100%;
 
     display: grid;
     grid-template-rows: 100vh 100vh 100vh 100vh 80px;
 
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+
     color: #fff;
+    font-family: $ff-fira;
+
+    a:hover {
+        opacity: 0.8;
+    }
 }
