@@ -584,7 +584,8 @@ footer {
   height: 50px;
   background-color: #554556;
   color: #fff;
-  border: none; }
+  border: 1px solid white;
+  border-radius: 10px; }
 
 .toTheTop__button--show {
   display: block; }
